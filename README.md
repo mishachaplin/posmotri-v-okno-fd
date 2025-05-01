@@ -1,3 +1,3 @@
 # ПОСМОТРИ В ОКНО
 
-[Here](https://github.com/mishachaplin/posmotri-v-okno-fd.git)
+[Тут](https://github.com/mishachaplin/posmotri-v-okno-fd.git)

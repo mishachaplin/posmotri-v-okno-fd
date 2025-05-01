@@ -40,7 +40,6 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   inline-size: 4px;
 }
@@ -50,7 +49,7 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .content {
@@ -63,19 +62,17 @@ ol {
 
 .result__video-container {
   position: relative;
+  margin-block-end: 16px;
   inline-size: 711px;
   block-size: 386px;
-  margin-block-end: 16px;
 }
 
 .result__video {
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
-  object-fit: cover;
-	object-position: center;
 }
-
-/* Form */
 
 .search-form {
   display: flex;
@@ -97,7 +94,6 @@ ol {
 }
 
 .search-form__textfield {
-  inline-size: 225px;
   border-inline-start: none;
   border-inline-end: none;
   border-block-start: 1px solid #fff;
@@ -106,6 +102,7 @@ ol {
   font-family: inherit;
   font-size: inherit;
   background-color: transparent;
+  inline-size: 225px;
   appearance: none;
 }
 
@@ -127,20 +124,20 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 19px;
-  block-size: 19px;
   margin-inline-end: 5px;
   border: 1px solid #fff;
+  inline-size: 19px;
+  block-size: 19px;
 }
 
 .search-form__pseudo-checkbox::after {
   content: "";
-  inset-block-start: 1px;
-  inset-inline-start: 1px;
   display: none;
   width: 15px;
   height: 15px;
   background-color: #fff;
+  inset-block-start: 1px;
+  inset-inline-start: 1px;
 }
 
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
@@ -154,12 +151,12 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .button {
   border: 1px solid #fff;
-  block-size: 34px;
   color: inherit;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
+  block-size: 34px;
 }
 
 .button:focus {
@@ -182,13 +179,13 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 
 .search-form__submit-button {
-  inline-size: 194px;
   align-self: flex-end;
+  inline-size: 194px;
 }
 
 .more-button {
-  inline-size: 100%;
   margin-block-start: 30px;
+  inline-size: 100%;
 }
 
 .content__details {
@@ -266,7 +263,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 
 .title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -278,7 +275,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 }
 
 .content__video-card-title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
