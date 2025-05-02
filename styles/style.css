@@ -57,12 +57,12 @@ ol {
   grid-template-columns: 711px 399px;
   align-items: end;
   gap: 30px;
-  width: 1140px;
+  inline-size: 1140px;
 }
 
 .result__video-container {
   position: relative;
-  margin-block-end: 16px;
+  margin-block-end: 18px;
   inline-size: 711px;
   block-size: 386px;
 }
@@ -83,6 +83,12 @@ ol {
   border: none;
 }
 
+.search-form__fieldset-title {
+  margin-block-end: 5px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -91,11 +97,12 @@ ol {
 .search-form__label {
   display: flex;
   inline-size: fit-content;
+  align-items: center;
 }
 
 .search-form__textfield {
-  border-inline-start: none;
-  border-inline-end: none;
+  border-inline-start: 1px solid transparent;
+  border-inline-end: 1px solid transparent;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
   color: inherit;
@@ -149,6 +156,18 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   cursor: pointer;
 }
 
+/* Доп стили для чекбокса */
+
+.search-form__label:active .search-form__label-text {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.search-form__label:active .search-form__pseudo-checkbox::after {
+  display: block;
+}
+
+
 .button {
   border: 1px solid #fff;
   color: inherit;
@@ -163,14 +182,15 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   appearance: none;
 }
 
-.button:active {
-  background-color: #545050;
-}
-
 .button:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
   cursor: pointer;
+}
+
+.button:active {
+  text-decoration: none;
+  background-color: #545050;
 }
 
 .button:focus-visible {
@@ -193,14 +213,24 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   block-size: 100%;
 }
 
+/* правим тут */
 .title {
-  margin-block-end: 19px;
+  margin-block-end: 23px;
+  font-family: 'Oswald';
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
 }
 
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__list {
@@ -223,17 +253,13 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   background-color: #545050;
 }
 
-.content__video-card {
-  display: flex;
-  align-items: start;
-}
-
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 1px;
 }
 
 .content__card-link:active {
+  text-decoration: none;
   background-color: #545050;
 }
 
@@ -243,6 +269,42 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
+  outline-offset: -1px;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+}
+
+/* тут наверно нужно значение ширины */
+.content__video-card-description-container {
+  flex-grow: 1;
+  inline-size: 196px;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald';
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  padding-block-start: 2px;
+  line-height: 100%;
+}
+
+/* тут как-то иначе */
+.content__video-card-description {
+  padding-block-start: 5px;
+  line-height: 16.2px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -250,42 +312,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
   height: 103px;
   object-fit: cover;
   object-position: center;
-}
-
-.content__video-card-description-container {
-  flex-grow: 1;
-}
-
-.search-form__fieldset-title {
-  margin-block-end: 5px;
-  font-weight: 400;
-  font-size: 18px;
-}
-
-.title {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 94%;
-  text-transform: uppercase;
-}
-
-.content__accent {
-  color: #545050;
-}
-
-.content__video-card-title {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-overflow: ellipsis;
-}
-
-.content__video-card-description {
-  line-height: 16.2px;
-  text-overflow: ellipsis;
-  line-clamp: 4;
+  flex-shrink: 0;
 }
 
 .visually-hidden {
